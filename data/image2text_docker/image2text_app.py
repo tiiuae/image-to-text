@@ -7,7 +7,8 @@ import io
 
 app = Flask(__name__)
 
-BLIP2_SHRADED_MODEL_PATH = "./data/models/huggingface/models--ybelkada--blip2-opt-2.7b-fp16-sharded/snapshots/5c169c86c274058d9fa5359e8049ce3010d6c957/"
+#BLIP2_SHRADED_MODEL_PATH = "./data/models/huggingface/models--ybelkada--blip2-opt-2.7b-fp16-sharded/snapshots/5c169c86c274058d9fa5359e8049ce3010d6c957/"
+BLIP2_SHRADED_MODEL_PATH = "data/models/huggingface/models--Salesforce--blip2-opt-2.7b/snapshots/51572668da0eb669e01a189dc22abe6088589a24"
 
 # Load models and processor
 processor = AutoProcessor.from_pretrained("Salesforce/blip2-opt-2.7b")
