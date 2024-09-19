@@ -2,7 +2,7 @@
 FROM dustynv/l4t-pytorch:r36.2.0
 
 # Install dependencies using pip
-RUN pip3 install timm PySide6 accelerate flash_attn transformers python-multipart uvicorn
+RUN pip3 install timm PySide6 accelerate flash_attn transformers python-multipart uvicorn fastapi
 
 # Set the working directory in the container
 WORKDIR /
