@@ -6,4 +6,4 @@
 #fi
 #IMG_PATH=$1
 
-curl -X POST -F "image=@test.jpg" http://localhost:5050/generate_caption
+curl -X POST -F "image=@$(pwd)/test.jpg" http://localhost:5000/generate_image_caption
