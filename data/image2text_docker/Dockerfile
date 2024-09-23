@@ -1,6 +1,8 @@
 # Use the pytorch image as the base
 FROM dustynv/l4t-pytorch:r36.2.0
 
+LABEL org.opencontainers.image.source=https://github.com/tiiuae/image-to-text
+
 # Install dependencies using pip
 RUN pip3 install timm PySide6 accelerate flash_attn transformers python-multipart uvicorn fastapi
 
