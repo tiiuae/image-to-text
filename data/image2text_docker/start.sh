@@ -11,7 +11,7 @@ fi
 input_path="$1"
 
 # Run the Docker command with the replaced path
-sudo docker run --runtime nvidia -it --rm --network host \
+sudo docker run --runtime nvidia -it --rm \
     --volume /tmp/argus_socket:/tmp/argus_socket \
     --volume /etc/enctune.conf:/etc/enctune.conf \
     --volume /etc/nv_tegra_release:/etc/nv_tegra_release \
@@ -37,4 +37,8 @@ sudo docker run --runtime nvidia -it --rm --network host \
     --device /dev/i2c-8 \
     --device /dev/i2c-9 \
     -v /run/jtop.sock:/run/jtop.sock \
-    image2text_app:latest
+    -p 5050:5000 \
+    ghcr.io/tiiuae/image-to-text:latest
+
+#    --network host \
+#    image2text_app:latest

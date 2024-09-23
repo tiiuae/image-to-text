@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo docker build -t image2text_app .
+sudo docker build -t ghcr.io/tiiuae/image-to-text:latest .
