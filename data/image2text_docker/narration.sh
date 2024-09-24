@@ -21,7 +21,7 @@ kill $(voiceRecognition.pid)
 echo $! > $RUNDIR/voiceRecognition.pid
 cd $RUNDIR
 
-cd text-to-speech
+cd text2speech
 kill $(cat piper.pid)
 ./piper.sh &
 echo $! > $RUNDIR/piper.pid
