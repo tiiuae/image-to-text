@@ -10,6 +10,8 @@ WORKDIR /
 # Copy your application code to the container
 COPY image2text_app.py /
 
+COPY models--microsoft--Florence-2-large /
+
 COPY test.jpg /
 
 # Specify the command to run your application
