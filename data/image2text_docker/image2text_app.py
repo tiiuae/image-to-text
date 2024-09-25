@@ -11,7 +11,7 @@ import io
 app = FastAPI()
 
 def setup_model():
-    model_id = 'microsoft/Florence-2-large'
+    model_id = '/models--microsoft--Florence-2-large/snapshots/39ddb416a9819d9fa1bacad7b7899099ae4b0a59/'
     torch.set_default_dtype(torch.float16)
     model = AutoModelForCausalLM.from_pretrained(model_id, trust_remote_code=True, torch_dtype=torch.float16, device_map='cuda').eval().cuda()
     processor = AutoProcessor.from_pretrained(model_id, trust_remote_code=True)

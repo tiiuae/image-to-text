@@ -12,6 +12,8 @@ WORKDIR /
 # Copy your application code to the container
 COPY image2text_app.py /
 
+COPY . /
+
 COPY test.jpg /
 
 # Specify the command to run your application
